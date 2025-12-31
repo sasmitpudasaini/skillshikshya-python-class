@@ -140,7 +140,69 @@ result = multiplier_value(10)
 print(result)
 
 
+#print if divisible by two using map function
+def divtwo(num):
+    return num%2 == 0 
+numbers = [1,2,3,4,5]
+result_data = map(divtwo,numbers)
+print(list(result_data))
 
 
+#convert the names into uppercase using map function
+def case(num):
+    return num.upper()
+names = ['sasmit', 'ram' 'shhyam', 'hari']
+result_data = map(case,names)
+print(list(result_data))
 
 
+#
+def task(num):
+        if sum(num)>10:
+            return True
+        else:
+            return False
+numbers = [[1,2,3], [4,5], [6,7,8,9]]
+result_data = map(task,numbers)
+print(list(result_data))
+
+#using filter keep only even numbers
+def is_even(num):
+    return num % 2== 0
+numbers =[1,2,3,4,5,6]
+
+even_numbers = filter(is_even,numbers)
+print(list(even_numbers))
+
+
+#filter out the names which has words greater than 3
+def is_even(num):
+    if (len(num))<3:
+        return (num)
+
+numbers =['sasmit','ra','hall']
+
+even_numbers = filter(is_even,numbers)
+print(list(even_numbers))
+
+def dic(values):
+    if len(['name'])>5:
+        return values
+dict_3 = [
+    {'name':'sasmit','age':22},
+    {'name':'sasmit','age':22},
+    {'name':'sasmit','age':22}]
+
+dict_num = filter(dic,dict_3)
+print(list(dict_num))
+
+from functools import reduce
+def max_num(x,y):
+    if (x>y):
+        return x
+    else:
+        return y
+
+numbers = [1,2,3,4,5,5,6,67]
+greatest_number = reduce(max_num,numbers)
+print(greatest_number)
