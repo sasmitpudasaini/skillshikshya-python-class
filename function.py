@@ -185,16 +185,29 @@ numbers =['sasmit','ra','hall']
 even_numbers = filter(is_even,numbers)
 print(list(even_numbers))
 
-def dic(values):
-    if len(['name'])>5:
-        return values
-dict_3 = [
-    {'name':'sasmit','age':22},
-    {'name':'sasmit','age':22},
-    {'name':'sasmit','age':22}]
+# def dic(values):
+#     if len(['name'])>5:
+#         return values
+# dict_3 = [
+#     {'name':'sasmit','age':22},
+#     {'name':'sasmit','age':22},
+#     {'name':'sasmit','age':22}]
 
-dict_num = filter(dic,dict_3)
-print(list(dict_num))
+# dict_num = filter(dic,dict_3)
+# print(list(dict_num))
+
+#___ method 2---------#
+# #sends filtering using dictionary into list 
+data ={
+    'name':'alisha',
+    'name':'bishwaw',
+    'name':'apple',
+}
+def name_length(item):
+    return len(item['name'])>3
+
+filter_data=filter(name_length,data)
+print(dict(filter_data))
 
 from functools import reduce
 def max_num(x,y):
